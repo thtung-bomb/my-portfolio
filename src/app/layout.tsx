@@ -25,8 +25,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+
+          {/* Gradient Base */}
+          <div className="absolute inset-0 
+            bg-linear-to-br  
+            from-slate-950 via-slate-900 to-slate-950"
+          />
+
+          {/* Radial Glow */}
+          <div className="
+            absolute left-1/2 -translate-x-1/2
+            top-[-30%] md:top-[-20%]
+            w-100 h-100 
+            sm:w-150 sm:h-150
+            md:w-200 md:h-200
+            bg-indigo-500/20 
+            blur-[100px] md:blur-[140px]
+            rounded-full
+          " />
+
+          {/* Grid Pattern */}
+          <div className="
+            absolute inset-0 
+            bg-[radial-gradient(circle_at_1px_1px,rgba(99,102,241,0.15)_1px,transparent_0)]
+            bg-size-[25px_25px] sm:bg-size-[30px_30px] md:bg-size-[40px_40px]
+            opacity-30
+          " />
+
+        </div>
         {children}
       </body>
     </html>
