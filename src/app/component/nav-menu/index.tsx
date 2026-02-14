@@ -1,6 +1,6 @@
 function NavMenu() {
 	return (
-		<div>
+		<div className="absolute top-0">
 			Navigation Menu
 		</div>
 	)
