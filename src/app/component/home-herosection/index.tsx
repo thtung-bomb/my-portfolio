@@ -1,8 +1,8 @@
 function HomeHeroSection() {
 	return (
-		<div className='flex flex-col justify-center items-center'>
+		<div className='flex flex-col justify-center items-center w-fit'>
 			{/* badge */}
-			<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6764f2]/10 border border-[#6764f2]/20 text-[#6764f2] text-xs font-bold uppercase tracking-widest mb-8">
+			<div className="inline-flex items-center gap-2 px-6 py-1 rounded-full bg-[#6764f2]/10 border border-[#6764f2]/20 text-[#6764f2] text-xs font-bold uppercase tracking-widest mb-8">
 				<span className="relative flex h-2 w-2">
 					<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6764f2] opacity-75"></span>
 					<span className="relative inline-flex rounded-full h-2 w-2 bg-[#6764f2]"></span>
