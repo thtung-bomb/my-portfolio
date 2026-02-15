@@ -2,18 +2,21 @@
 
 import { faBars, faTerminal, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function Navigation() {
 	const [isOpen, setIsOpen] = useState(false);
+	const pathname = usePathname();
+
 
 	const navLinks = [
 		{ label: 'Home', href: '/' },
 		{ label: 'About', href: '/about' },
-		{ label: 'Projects', href: '#' },
-		{ label: 'Skills', href: '#' },
-		{ label: 'Contact', href: '#' },
+		{ label: 'Projects', href: '/projects' },
+		{ label: 'Skills', href: '/skills' },
+		{ label: 'Contact', href: '/contact' },
 	];
 
 	return (
@@ -33,35 +36,24 @@ export default function Navigation() {
 					{/* Desktop Navigation Links */}
 					<div className="hidden items-center gap-8 md:flex">
 						{navLinks.map((link) => (
-							<a
+							<Link
 								key={link.label}
 								href={link.href}
-								className={`text-sm font-medium transition-colors ${link.label === 'Home'
-									? 'bg-linear-to-r underline	underline-offset-4 from-indigo-400 via-amber-200 to-indigo-600 bg-clip-text text-[#6764f2] font-semibold drop-shadow-[0_0_8px_rgba(99,102,241,0.6)]'
+								className={`text-sm font-medium transition-all duration-300 ${pathname === link.href
+									? 'bg-[#6764f2] bg-clip-text text-transparent font-semibold drop-shadow-[0_0_8px_rgba(99,102,241,0.6)] underline underline-offset-4'
 									: 'text-slate-400 hover:text-white'
 									}`}
 							>
 								{link.label}
-							</a>
+							</Link>
 						))}
 					</div>
 
 					{/* Right Section - Button and Avatar */}
 					<div className="flex items-center gap-4">
 						<button className="rounded-4xl cursor-pointer bg-[#6764f2] px-5 py-2 text-sm font-bold text-white transition-all hover:bg-[#6764f2]/60">
-							Hire Me
+							My Resume
 						</button>
-
-						{/* Avatar */}
-						<div className="h-8 w-8 overflow-hidden rounded-full border-2 border-indigo-600/30 p-0.5">
-							<Image
-								alt="Profile"
-								width={32}
-								height={32}
-								className="h-full w-full rounded-full object-cover"
-								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
-							/>
-						</div>
 
 						{/* Mobile Menu Button */}
 						<button

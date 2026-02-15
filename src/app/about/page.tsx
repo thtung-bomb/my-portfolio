@@ -1,4 +1,4 @@
-import { AboutPage } from "@/app/component"
+import { AboutPage } from "@/common/component"
 
 function page() {
 	return (

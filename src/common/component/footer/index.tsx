@@ -3,9 +3,11 @@ import { faAt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 
-function HomeFooter() {
+function HomeFooter({ className = "" }) {
 	return (
-		<div className='py-4'>
+		<footer className={`w-full py-4 bg-transparent ${className}`}>
+			{/* line */}
+			<div className="h-px w-full max-w-6xl my-6 mx-auto bg-linear-to-r from-transparent via-amber-200/40 to-transparent" />
 			<div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
 
 				{/* Left */}
@@ -14,7 +16,7 @@ function HomeFooter() {
 						Building modern web applications with clean architecture.
 					</p>
 					<p className="mt-1 text-[#6764f2]">
-						Software Architect
+						Software Engineer
 					</p>
 				</div>
 
@@ -23,7 +25,7 @@ function HomeFooter() {
 					<Link
 						href="https://github.com/thtung-bomb"
 						target="_blank"
-						className="text-amber-50/80 hover:text-amber-200 transition-colors size-6"
+						className="text-amber-50/80 hover:text-amber-200 transition-colors size-6 text-2xl"
 					>
 						<FontAwesomeIcon icon={faSquareGithub} />
 					</Link>
@@ -31,14 +33,14 @@ function HomeFooter() {
 					<Link
 						href="https://www.linkedin.com/in/thanhtung35/"
 						target="_blank"
-						className="text-amber-50/80 hover:text-amber-200 transition-colors size-6"
+						className="text-amber-50/80 hover:text-amber-200 transition-colors size-6 text-2xl"
 					>
 						<FontAwesomeIcon icon={faSquareLinkedin} />
 					</Link>
 
 					<Link
 						href="mailto:thanhtung3523@gmail.com"
-						className="text-amber-50/80 hover:text-amber-200 transition-colors size-6"
+						className="text-amber-50/80 hover:text-amber-200 transition-colors size-6 text-2xl"
 					>
 						<FontAwesomeIcon icon={faAt} />
 					</Link>
@@ -49,7 +51,8 @@ function HomeFooter() {
 			<div className="text-center mt-6 text-xs text-slate-500">
 				© {new Date().getFullYear()} Nguyen Thanh Tung &#9679; Software Engineer
 			</div>
-		</div>
+		</footer>
+
 	)
 }
 
