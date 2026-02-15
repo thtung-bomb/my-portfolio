@@ -47,7 +47,7 @@ function HomeFooter() {
 
 			{/* Bottom Line */}
 			<div className="text-center mt-6 text-xs text-slate-500">
-				© {new Date().getFullYear()} Nguyen Thanh Tung. Built with Next.js & TailwindCSS.
+				© {new Date().getFullYear()} Nguyen Thanh Tung &#9679; Software Engineer
 			</div>
 		</div>
 	)
