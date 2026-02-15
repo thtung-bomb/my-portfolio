@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { NavMenu, HomeFooter } from "@/common/component";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased flex flex-col relative`}
       >
         <div className="absolute inset-0 -z-10 overflow-hidden">
 
@@ -56,7 +58,14 @@ export default function RootLayout({
           " />
 
         </div>
-        {children}
+
+        <NavMenu />
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <HomeFooter className="mt-auto" />
       </body>
     </html>
   );

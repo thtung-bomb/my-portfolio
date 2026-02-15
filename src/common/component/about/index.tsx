@@ -1,12 +1,16 @@
+'use client'
+
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Navigation from '../nav-menu';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function AboutPage() {
+	const router = useRouter()
 	return (
-		<main className="relative min-h-screen w-full bg-slate-950">
+		<div className="relative w-full">
 			{/* Background Effects */}
 			<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1)_0%,transparent_50%)]" />
 			<div className="pointer-events-none absolute inset-0 opacity-40">
@@ -19,9 +23,6 @@ export default function AboutPage() {
 					}}
 				/>
 			</div>
-
-			{/* Navigation */}
-			<Navigation />
 
 			{/* Main Content */}
 			<div className="relative z-10 px-6 pt-32 pb-20 md:px-12">
@@ -44,17 +45,21 @@ export default function AboutPage() {
 								/>
 
 								{/* Status Badge */}
-								<div className="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-slate-950/80 backdrop-blur-md border border-white/10">
+								<div className="absolute bottom-6 left-6 right-6 p-4 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10">
 									<div className="flex items-center gap-3">
-										<div className="flex h-2 w-2 rounded-full bg-green-500">
-											<span className="animate-pulse absolute h-2 w-2 rounded-full bg-green-500" />
+										<div className="relative flex items-center justify-center h-3 w-3">
+											{/* Ping Effect */}
+											<span className="absolute inline-flex h-full w-full rounded-full bg-[#6764f2] opacity-75 animate-ping"></span>
+
+											{/* Solid Center Dot */}
+											<span className="relative inline-flex h-3 w-3 rounded-full bg-[#6764f2]"></span>
 										</div>
 										<div>
 											<p className="text-xs font-bold uppercase tracking-widest text-indigo-400">
 												Status
 											</p>
 											<p className="text-sm font-medium text-white">
-												Available for Strategic Roles
+												Available for Junior / Fresher Opportunities
 											</p>
 										</div>
 									</div>
@@ -68,24 +73,26 @@ export default function AboutPage() {
 							<div className="space-y-4">
 								<div className="flex items-center gap-2 text-indigo-400 font-bold tracking-widest text-xs uppercase">
 									<span className="h-px w-8 bg-indigo-600" />
-									Professional Profile
+									About Me
 								</div>
 
 								<h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white">
-									Architecting <span className="bg-linear-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
-										Solutions
-									</span> with Code.
+									Turning Ideas into <span className="bg-linear-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
+										Scalable Applications
+									</span>
 								</h1>
 							</div>
 
 							{/* Description */}
 							<div className="space-y-6 text-slate-400 leading-relaxed text-base md:text-lg">
 								<p>
-									I specialize in transforming complex business requirements into scalable, high-performance digital ecosystems. My journey has evolved from writing clean code to engineering entire platforms that thrive under pressure.
+									I am a passionate software developer at the beginning of my professional journey.
+									I focus on building solid foundations in Full-stack development and writing clean, maintainable code.
 								</p>
 
 								<p>
-									With a focus on <span className="text-white font-medium">complex systems</span> and <span className="text-white font-medium">high-availability architecture</span>, I bridge the gap between abstract business goals and concrete technical reality. I don&rsquo;t just build apps; I engineer experiences that scale.
+									My goal is to grow into a strong engineer by solving real-world problems, understanding system design fundamentals,
+									and continuously improving through hands-on projects. I value discipline, consistency, and long-term growth over shortcuts.
 								</p>
 							</div>
 
@@ -93,54 +100,59 @@ export default function AboutPage() {
 							<div className="grid grid-cols-2 gap-4">
 								<div className="flex flex-col gap-2 p-5 rounded-xl bg-white/5 border border-white/10 hover:border-indigo-600/30 transition-colors">
 									<span className="text-3xl font-black text-white tracking-tight">
-										8+
+										2025
 									</span>
 									<span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-										Years Experience
+										Software Engineering Graduate
 									</span>
 								</div>
 
 								<div className="flex flex-col gap-2 p-5 rounded-xl bg-white/5 border border-white/10 hover:border-indigo-600/30 transition-colors">
 									<span className="text-3xl font-black text-white tracking-tight">
-										100%
+										Daily
 									</span>
 									<span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-										Uptime Track
+										Coding & Learning Habit
 									</span>
 								</div>
 							</div>
 
 							{/* CTA and Social Links */}
 							<div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
-								<button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors group">
+								<button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors group cursor-pointer"
+									onClick={() => router.push('/contact')}
+								>
 									Contact Me
-									<FontAwesomeIcon icon={faArrowUpRightFromSquare} className='h-4 w-4 group-hover:translate-x-1 transition-transform' />
+									<FontAwesomeIcon icon={faArrowUpRightFromSquare} className='h-2 w-2 group-hover:translate-x-1 transition-transform' />
 								</button>
 
 								<div className="flex items-center gap-4">
-									<a
-										href="#"
+									<Link
+										href="https://github.com/thtung-bomb"
+										target='_blank'
 										className="h-11 w-11 flex items-center justify-center rounded-full bg-white/5 hover:bg-indigo-600/20 hover:text-indigo-400 transition-all border border-white/10"
 										aria-label="GitHub"
 									>
 										<FontAwesomeIcon icon={faGithub} className='size-5' />
-									</a>
+									</Link>
 
-									<a
-										href="#"
+									<Link
+										href="https://www.linkedin.com/in/thanhtung35/"
+										target="_blank"
 										className="h-11 w-11 flex items-center justify-center rounded-full bg-white/5 hover:bg-indigo-600/20 hover:text-indigo-400 transition-all border border-white/10"
 										aria-label="LinkedIn"
 									>
 										<FontAwesomeIcon icon={faLinkedin} className='size-5' />
-									</a>
+									</Link>
 
-									<a
-										href="#"
+									<Link
+										href="https://mail.google.com/mail/?view=cm&to=thanhtung3523@gmail.com"
+										target="_blank"
 										className="h-11 w-11 flex items-center justify-center rounded-full bg-white/5 hover:bg-indigo-600/20 hover:text-indigo-400 transition-all border border-white/10"
 										aria-label="Email"
 									>
 										<FontAwesomeIcon icon={faEnvelope} className='size-5' />
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -155,28 +167,34 @@ export default function AboutPage() {
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{[
 								{
-									title: 'Full-Stack Development',
-									description: 'React, Node.js, TypeScript, and modern cloud infrastructure',
+									title: 'Frontend Development',
+									description:
+										'Building responsive user interfaces using React, Next.js, and TypeScript with clean and maintainable structure.',
 								},
 								{
-									title: 'System Design',
-									description: 'Scalable architectures for high-traffic applications',
+									title: 'Backend Fundamentals',
+									description:
+										'Developing RESTful APIs using Python and working with relational databases.',
 								},
 								{
-									title: 'Performance Optimization',
-									description: 'Database optimization, caching strategies, and load balancing',
+									title: 'Problem Solving',
+									description:
+										'Strong foundation in data structures, algorithms, and logical thinking to approach real-world challenges.',
 								},
 								{
-									title: 'DevOps & Infrastructure',
-									description: 'Docker, Kubernetes, CI/CD pipelines, and cloud deployment',
+									title: 'Project-Based Learning',
+									description:
+										'Actively building full-stack projects to improve architecture thinking and production-level mindset.',
 								},
 								{
-									title: 'API Development',
-									description: 'RESTful and GraphQL APIs with robust error handling',
+									title: 'Clean Code Practices',
+									description:
+										'Writing readable, structured, and scalable code with attention to naming, modularity, and reusability.',
 								},
 								{
-									title: 'Mentorship & Leadership',
-									description: 'Building high-performing teams and code standards',
+									title: 'Continuous Improvement',
+									description:
+										'Committed to long-term growth through disciplined learning, feedback, and consistent daily practice.',
 								},
 							].map((item, index) => (
 								<div
@@ -195,19 +213,6 @@ export default function AboutPage() {
 					</div>
 				</div>
 			</div>
-
-			{/* Footer */}
-			<footer className="relative z-10 border-t border-white/10 px-6 py-8 md:px-12 mt-20">
-				<div className="mx-auto max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-4">
-					<p className="text-xs font-medium tracking-widest uppercase text-slate-500">
-						© 2024 TungPortfolio — All Rights Reserved
-					</p>
-					<div className="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-slate-500">
-						<span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-						Remote Based • Worldwide
-					</div>
-				</div>
-			</footer>
-		</main>
+		</div>
 	);
 }

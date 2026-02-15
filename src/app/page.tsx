@@ -1,11 +1,9 @@
-import { HomeFooter, HomeHeroSection, NavMenu, SkillList } from './component'
+import { HomeHeroSection, SkillList } from '../common/component'
 
 
 function page() {
   return (
-    <div className='min-h-screen flex flex-col'>
-      <NavMenu />
-
+    <div className='absolute inset-0 flex flex-col'>
       <main className="flex-1 flex flex-col items-center justify-center text-amber-50">
         {/* Hero sections */}
         <HomeHeroSection />
@@ -13,13 +11,6 @@ function page() {
         {/* Skills */}
         <SkillList />
       </main>
-
-      {/* line */}
-      <div className="h-px w-full max-w-6xl mx-auto bg-linear-to-r from-transparent via-amber-200/40 to-transparent" />
-
-      <footer>
-        <HomeFooter />
-      </footer>
     </div>
   )
 }
