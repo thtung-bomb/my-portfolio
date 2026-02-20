@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faJs, faPython, faReact, faTypescript } from "@fortawesome/free-brands-svg-icons"
+import { faGolang, faJs, faReact, faTypescript } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 const LIST_SKILLS_DATA = [
@@ -13,8 +13,8 @@ const LIST_SKILLS_DATA = [
 		icon: <FontAwesomeIcon icon={faJs} className="text-white" />
 	},
 	{
-		name: 'Python',
-		icon: <FontAwesomeIcon icon={faPython} />
+		name: 'Golang',
+		icon: <FontAwesomeIcon icon={faGolang} />
 	},
 	{
 		name: 'React',

@@ -61,7 +61,7 @@ export default function RootLayout({
 
         <NavMenu />
 
-        <main className="flex-1">
+        <main className="">
           {children}
         </main>
 

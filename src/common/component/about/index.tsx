@@ -118,7 +118,7 @@ export default function AboutPage() {
 							</div>
 
 							{/* CTA and Social Links */}
-							<div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
+							<div className="flex sm:flex-row align-middle items-center sm:items-center gap-6 pt-4">
 								<button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors group cursor-pointer"
 									onClick={() => router.push('/contact')}
 								>
@@ -174,7 +174,7 @@ export default function AboutPage() {
 								{
 									title: 'Backend Fundamentals',
 									description:
-										'Developing RESTful APIs using Python and working with relational databases.',
+										'Developing RESTful APIs using Golang and working with relational databases.',
 								},
 								{
 									title: 'Problem Solving',
