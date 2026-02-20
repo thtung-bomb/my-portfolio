@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram';
 
 export default function ContactPage() {
 	const [formData, setFormData] = useState({
@@ -152,7 +153,7 @@ export default function ContactPage() {
 							<p className="text-xs font-bold uppercase tracking-widest text-slate-500">Connect Elsewhere</p>
 							<div className="flex items-center gap-4">
 								<Link
-									href="#"
+									href="https://github.com/thtung-bomb"
 									className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 text-slate-400 transition-all hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
 									title="GitHub"
 								>
@@ -161,7 +162,7 @@ export default function ContactPage() {
 									</svg>
 								</Link>
 								<Link
-									href="#"
+									href="https://www.linkedin.com/in/thanhtung3523"
 									className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 text-slate-400 transition-all hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
 									title="LinkedIn"
 								>
@@ -170,13 +171,11 @@ export default function ContactPage() {
 									</svg>
 								</Link>
 								<Link
-									href="#"
+									href="https://t.me/thanhtung3523"
 									className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 text-slate-400 transition-all hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
-									title="Twitter"
+									title="Telegram"
 								>
-									<svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-										<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7z" />
-									</svg>
+									<FontAwesomeIcon icon={faTelegram} className="text-3xl" />
 								</Link>
 							</div>
 						</div>
@@ -291,7 +290,7 @@ export default function ContactPage() {
 							<button
 								type="submit"
 								disabled={isLoading}
-								className="group flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-8 py-4 font-bold text-white shadow-xl shadow-indigo-600/20 transition-all hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-600/30 md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+								className="group flex w-full items-center justify-center gap-2 rounded-xl hover:cursor-pointer bg-indigo-600 px-8 py-4 font-bold text-white shadow-xl shadow-indigo-600/20 transition-all hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-600/30 md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
 							>
 								<span>{isLoading ? 'Sending...' : 'Send Message'}</span>
 								{!isLoading && (

@@ -37,11 +37,11 @@ export default function AboutPage() {
 							{/* Image Container */}
 							<div className="relative aspect-4/5 w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-slate-800/50 shadow-2xl">
 								<Image
-									width={500}
-									height={500}
+									width={1200}
+									height={1200}
 									alt="Professional Portrait"
 									className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-									src="/about-portrait.jpg"
+									src="/image-bg.png"
 								/>
 
 								{/* Status Badge */}
@@ -118,7 +118,7 @@ export default function AboutPage() {
 							</div>
 
 							{/* CTA and Social Links */}
-							<div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
+							<div className="flex sm:flex-row align-middle items-center sm:items-center gap-6 pt-4">
 								<button className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors group cursor-pointer"
 									onClick={() => router.push('/contact')}
 								>
@@ -174,7 +174,7 @@ export default function AboutPage() {
 								{
 									title: 'Backend Fundamentals',
 									description:
-										'Developing RESTful APIs using Python and working with relational databases.',
+										'Developing RESTful APIs using Golang and working with relational databases.',
 								},
 								{
 									title: 'Problem Solving',

@@ -21,7 +21,7 @@ function HomeFooter({ className = "" }) {
 				</div>
 
 				{/* Right */}
-				<div className="flex flex-col md:flex-row items-center gap-4">
+				<div className="flex flex-row items-center gap-4">
 					<Link
 						href="https://github.com/thtung-bomb"
 						target="_blank"
