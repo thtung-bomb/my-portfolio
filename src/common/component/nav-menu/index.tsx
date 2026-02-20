@@ -51,7 +51,9 @@ export default function Navigation() {
 
 					{/* Right Section - Button and Avatar */}
 					<div className="flex items-center gap-4">
-						<button className="rounded-4xl cursor-pointer bg-[#6764f2] px-5 py-2 text-sm font-bold text-white transition-all hover:bg-[#6764f2]/60">
+						<button className="rounded-4xl cursor-pointer bg-[#6764f2] px-5 py-2 text-sm font-bold text-white transition-all hover:bg-[#6764f2]/60"
+							onClick={() => window.open('/resume.pdf', '_blank')}
+						>
 							My Resume
 						</button>
 

@@ -62,12 +62,12 @@ function HeroSection() {
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
         `}
 			>
-				Crafting{" "}
+				Aspiring{" "}
 				<span className="bg-linear-to-br from-[#6764f2] via-[#a78bfa] to-[#60a5fa] bg-clip-text text-transparent">
-					Scalable
+					Full-Stack
 				</span>
 				<br />
-				Digital Solutions
+				Software Engineer
 			</h1>
 
 			{/* Subtitle */}

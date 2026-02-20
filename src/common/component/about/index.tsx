@@ -37,11 +37,11 @@ export default function AboutPage() {
 							{/* Image Container */}
 							<div className="relative aspect-4/5 w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-slate-800/50 shadow-2xl">
 								<Image
-									width={500}
-									height={500}
+									width={1200}
+									height={1200}
 									alt="Professional Portrait"
 									className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-									src="/about-portrait.jpg"
+									src="/image-bg.png"
 								/>
 
 								{/* Status Badge */}
