@@ -63,7 +63,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased flex flex-col relative`}
       >
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="fixed inset-0 -z-10 overflow-hidden">
 
           {/* Gradient Base */}
           <div className="absolute inset-0 
@@ -99,7 +99,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <HomeFooter className="mt-auto" />
+        <HomeFooter className="mt-auto z-10" />
       </body>
     </html>
   );
