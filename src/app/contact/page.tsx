@@ -162,7 +162,7 @@ export default function ContactPage() {
 									</svg>
 								</Link>
 								<Link
-									href="https://www.linkedin.com/in/thanhtung3523"
+									href="https://www.linkedin.com/in/thanhtung35"
 									className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 text-slate-400 transition-all hover:border-indigo-600 hover:bg-indigo-600 hover:text-white"
 									title="LinkedIn"
 								>
