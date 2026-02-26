@@ -1,4 +1,4 @@
-# 💼 My Portfolio
+# My Portfolio
 
 A personal portfolio website showcasing my frontend development projects, technical skills, and software engineering journey.
 
@@ -6,7 +6,7 @@ A personal portfolio website showcasing my frontend development projects, techni
 
 ---
 
-## 📌 Overview
+## Overview
 
 This portfolio highlights selected projects built with modern frontend technologies, focusing on scalability, performance, and clean user interface implementation.
 
@@ -14,7 +14,7 @@ The goal of this website is to present real-world development experience and dem
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - ReactJS
 - Next.js
@@ -25,7 +25,7 @@ The goal of this website is to present real-world development experience and dem
 
 ---
 
-## ✨ Features
+## Features
 
 - Responsive design optimized for desktop and mobile
 - Dynamic project rendering
@@ -35,7 +35,7 @@ The goal of this website is to present real-world development experience and dem
 
 ---
 
-## 🧠 What This Portfolio Demonstrates
+## What This Portfolio Demonstrates
 
 - Strong understanding of modern React patterns
 - Component-based architecture
