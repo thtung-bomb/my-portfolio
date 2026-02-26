@@ -30,11 +30,11 @@ const skillsData = [
 		accentText: 'text-cyan-400',
 		accentBar: 'from-cyan-500 to-blue-400',
 		skills: [
-			{ name: 'Go', level: 70 },
-			{ name: 'Gin', level: 70 },
-			{ name: 'PostgreSQL / SQL', level: 65 },
+			{ name: 'Rust', level: 30 },
+			{ name: 'Cargo', level: 30 },
+			{ name: 'Postgres SQL', level: 50 },
 		],
-		tags: ['Go', 'Prisma', 'Basic Authentication', 'CRUD Systems'],
+		tags: ['Rust', 'Cargo', 'Basic Authentication', 'CRUD Systems'],
 	},
 	{
 		category: 'Tools & Workflow',
@@ -53,6 +53,8 @@ const skillsData = [
 		tags: ['VS Code', 'Bun / npm', 'Postman', 'Agile Basics'],
 	},
 ];
+
+const currentlyLearning = ['Rust', 'Docker', 'CI/CD Pipelines', 'System Design', 'gRPC', 'GraphQL'];
 
 function AnimatedBar({ level, barGradient }: { level: number; barGradient: string }) {
 	const [width, setWidth] = useState(0);
@@ -225,7 +227,7 @@ export default function SkillsPage() {
 								</span>
 							</div>
 							<div className="flex flex-wrap gap-3">
-								{['Docker', 'CI/CD Pipelines', 'System Design', 'gRPC'].map((item) => (
+								{currentlyLearning.map((item) => (
 									<span
 										key={item}
 										className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs font-semibold text-emerald-400"
