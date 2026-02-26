@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 export default function AboutPage() {
 	const router = useRouter()
 	return (
-		<div className="relative w-full">
+		<div className="relative w-full noscroll-bar">
 			{/* Background Effects */}
 			<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1)_0%,transparent_50%)]" />
 			<div className="pointer-events-none absolute inset-0 opacity-40">
@@ -174,7 +174,7 @@ export default function AboutPage() {
 								{
 									title: 'Backend Fundamentals',
 									description:
-										'Developing RESTful APIs using Golang and working with relational databases.',
+										'Developing RESTful APIs using Rust and working with relational databases.',
 								},
 								{
 									title: 'Problem Solving',

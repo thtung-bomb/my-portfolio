@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   description:
     "Software Engineer specializing in React, Next.js, TypeScript & Go. Open to new opportunities.",
   keywords: ["Software Engineer", "React", "Next.js", "TypeScript", "Go", "Portfolio"],
-  authors: [{ name: "Thanh Tung", url: "https://yourportfolio.com" }],
+  authors: [{ name: "Thanh Tung", url: "https://my-portfolio-tau-fawn-68.vercel.app/" }],
   creator: "Thanh Tung",
 
   // Open Graph (Facebook, LinkedIn preview)
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourportfolio.com",
+    url: "https://my-portfolio-tau-fawn-68.vercel.app/",
     siteName: "Thanh Tung Portfolio",
     title: "Thanh Tung — Software Engineer",
     description: "Software Engineer specializing in React, Next.js & Go.",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
 
   // Canonical URL
-  metadataBase: new URL("https://yourportfolio.com"),
+  metadataBase: new URL("https://my-portfolio-tau-fawn-68.vercel.app/"),
 
   // Robots
   robots: {

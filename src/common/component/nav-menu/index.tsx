@@ -2,13 +2,15 @@
 
 import { faBars, faTerminal, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function Navigation() {
 	const [isOpen, setIsOpen] = useState(false);
 	const pathname = usePathname();
+	const router = useRouter();
 
 
 	const navLinks = [
@@ -24,9 +26,9 @@ export default function Navigation() {
 			<nav className="mx-auto max-w-6xl px-6 py-8">
 				<div className="flex items-center justify-between rounded-4xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-md">
 					{/* Logo */}
-					<div className="flex items-center gap-2">
-						<div className="flex size-8 items-center justify-center rounded-full bg-indigo-600 ">
-							<FontAwesomeIcon icon={faTerminal} className='text-white' />
+					<div className="flex items-center gap-2 hover:cursor-pointer" onClick={() => router.push('/')}>
+						<div className="flex size-9 items-center justify-center">
+							<Image src="/icontungdev.png" alt="Logo" width={1000} height={1000} className='rounded-full' />
 						</div>
 						<span className="text-lg font-bold tracking-tight text-white">
 							ThanhTungPortfolio
